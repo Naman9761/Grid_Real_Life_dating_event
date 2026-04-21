@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Sparkles, Facebook, Instagram, Twitter, Youtube, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -17,15 +18,19 @@ export default function Footer() {
           >
             Ready to meet people<br />in real life?
           </motion.h2>
-          <motion.button 
+          <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.05 }}
-            className="px-12 py-6 rounded-full bg-linear-to-r from-brand-orange via-brand-pink to-brand-purple text-xl font-bold tracking-tight shadow-2xl shadow-brand-pink/40"
           >
-            Join the Waitlist
-          </motion.button>
+            <Link
+              to="/join-waitlist"
+              className="inline-block px-12 py-6 rounded-full bg-linear-to-r from-brand-orange via-brand-pink to-brand-purple text-xl font-bold tracking-tight shadow-2xl shadow-brand-pink/40"
+            >
+              Join the Waitlist
+            </Link>
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pt-12 border-t border-white/5">

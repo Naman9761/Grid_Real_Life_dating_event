@@ -1,183 +1,122 @@
 # GRID - Real Life Dating Events
 
-A premium social events brand for real-life matchmaking in Amsterdam and beyond. **No swiping, no algorithms—just real connections** in carefully curated venues.
+A premium social events brand website for real-life matchmaking in Amsterdam and beyond.  
+**No swiping, no algorithms - just real connections in curated venues.**
 
-## 🎯 About GRID
+## About GRID
 
-GRID reimagines dating events by bringing people together in real venues for genuine conversations and authentic connections. We host multiple event formats throughout Amsterdam and Rotterdam, creating opportunities for singles to meet in a fun, curated environment.
+GRID reimagines dating events by bringing people together in real venues for genuine conversations and authentic connections. This project is the marketing + conversion website that presents the concept, event formats, social proof, and upcoming event journeys.
 
-### Key Features
+## What Is Implemented
 
-- **Multiple Event Formats** - Match Grid, Pitch Your Mate, Blind Date Dinner, Speed Mingle
-- **Premium Venues** - Handpicked locations across Amsterdam and Rotterdam
-- **Real Connections** - No ghosting, no algorithms—just people meeting in person
-- **Community-Driven** - Events designed for genuine matchmaking
+- Multi-page experience with routing (`/`, `/events`, `/events/:id`, `/how-it-works`, `/about`, `/join-waitlist`)
+- Reusable section components for hero, social proof, format cards, event listings, and footer
+- Event details page with info bar, audience targeting, and timeline schedule
+- Shared event data model in `src/data/events.ts`
+- Responsive glassmorphism + neon visual style based on the GRID brand direction
 
-## 🚀 Getting Started
+## Here's how I translated the product idea into a high-conversion experience
+
+These are the concept-to-build screens I designed myself in Stitch, then translated into this React + TypeScript implementation.
+
+### Design references
+
+![Event details concept](docs/designs/design-event-details.png)
+![Desktop conversion concept](docs/designs/design-desktop-concept.png)
+![Mobile concept](docs/designs/design-mobile-concept.png)
+![Homepage conversion concept](docs/designs/design-homepage-concept.png)
+
+### Conversion thinking behind the build
+
+- Clear above-the-fold value proposition ("Stop Swiping. Start Showing Up.")
+- Trust builders early (social proof stats + premium venue framing)
+- Short path to action (`Join Now`, `Book Spot`, event-level CTAs)
+- Event-specific clarity (price, audience, schedule, venue in one glance)
+- Mobile-first readability with strong contrast and tap-friendly sections
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS v4
+- React Router
+- Lucide React
+- Motion
+
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
+- Node.js 18+ recommended
+- npm
 
 ### Installation
 
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/yourusername/grid-real-life-dating-events.git
-   cd grid-real-life-dating-events
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-
-   ```bash
-   npm run dev
-   ```
-
-   The app will be available at `http://localhost:3000`
-
-### Available Scripts
-
-- **`npm run dev`** - Start development server on port 3000
-- **`npm run build`** - Build for production
-- **`npm run preview`** - Preview production build locally
-- **`npm run lint`** - Run TypeScript type checking
-- **`npm run clean`** - Remove build artifacts
-
-## 📁 Project Structure
-
-```
-├── src/
-│   ├── components/          # React components
-│   │   ├── Navbar.tsx      # Navigation bar
-│   │   ├── Hero.tsx        # Hero section with profile cards
-│   │   ├── SocialProof.tsx # Social proof statistics
-│   │   ├── HowItWorks.tsx  # How GRID works section
-│   │   ├── EventFormats.tsx # Event format showcase
-│   │   ├── Experience.tsx  # Experience section
-│   │   ├── UpcomingEvents.tsx # Events listing
-│   │   ├── Footer.tsx      # Footer
-│   │   └── NeonBackground.tsx # Animated background
-│   ├── App.tsx             # Main app component
-│   ├── main.tsx            # App entry point
-│   └── index.css           # Global styles
-├── index.html              # HTML entry point
-├── package.json            # Project dependencies
-├── tsconfig.json           # TypeScript configuration
-├── vite.config.ts          # Vite configuration
-└── tailwind.config.js      # Tailwind CSS configuration
-```
-
-## 🎨 Tech Stack
-
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first CSS
-- **Vite** - Build tool and dev server
-- **Framer Motion** - Animation library
-- **Lucide React** - Icon library
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env` file based on `.env.example`:
-
 ```bash
-cp .env.example .env
+git clone https://github.com/yourusername/grid-real-life-dating-events.git
+cd grid-real-life-dating-events
+npm install
+npm run dev
 ```
 
-Currently, the app doesn't require any API keys, but you can add them as needed.
+The app runs at `http://localhost:3000`.
 
-## 🎭 Design System
+## Scripts
 
-The project uses Tailwind CSS with custom brand colors:
+- `npm run dev` - start Vite dev server on port 3000
+- `npm run build` - create production build
+- `npm run preview` - preview production build
+- `npm run lint` - TypeScript check (`tsc --noEmit`)
+- `npm run clean` - remove `dist/`
 
-- **Orange**: `brand-orange` (#F97316)
-- **Pink**: `brand-pink` (#EC4899)
-- **Purple**: `brand-purple` (#A855F7)
+## Project Structure
 
-### Glass Effect
+```text
+.
+├── docs/
+│   └── designs/                 # Stitch design references used in README
+├── src/
+│   ├── components/
+│   │   ├── EventAudience.tsx
+│   │   ├── EventCard.tsx
+│   │   ├── EventFormats.tsx
+│   │   ├── EventHero.tsx
+│   │   ├── EventInfoBar.tsx
+│   │   ├── EventSchedule.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── HowItWorks.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── NeonBackground.tsx
+│   │   ├── SocialProof.tsx
+│   │   └── UpcomingEvents.tsx
+│   ├── data/
+│   │   └── events.ts            # Event dataset and helper
+│   ├── pages/
+│   │   ├── AboutPage.tsx
+│   │   ├── EventDetails.tsx
+│   │   ├── EventsPage.tsx
+│   │   ├── HomePage.tsx
+│   │   ├── HowItWorksPage.tsx
+│   │   └── JoinWaitlistPage.tsx
+│   ├── App.tsx                  # Router and layout shell
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
 
-The app uses a "glass morphism" effect throughout. Check the CSS classes for:
-
-- `.glass` - Frosted glass background effect
-- `.text-gradient` - Gradient text effect
-
-## 🚀 Deployment
-
-### Build for Production
+## Build and Deployment
 
 ```bash
 npm run build
 ```
 
-This creates an optimized production build in the `dist/` directory.
-
-### Deploy to Netlify / Vercel
-
-1. Push your code to GitHub
-2. Connect your repository to Netlify or Vercel
-3. Set build command: `npm run build`
-4. Set output directory: `dist`
-
-## 📝 Development Workflow
-
-1. Create a new branch for your feature
-
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-2. Make your changes
-
-3. Test locally
-
-   ```bash
-   npm run dev
-   ```
-
-4. Run type checking
-
-   ```bash
-   npm run lint
-   ```
-
-5. Commit and push
-
-   ```bash
-   git add .
-   git commit -m "Add your feature"
-   git push origin feature/your-feature-name
-   ```
-
-6. Create a Pull Request
-
-## 🤝 Contributing
-
-We welcome contributions! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-## 📄 License
-
-This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
-
-## 👥 Team
-
-GRID is Amsterdam's premier real-life dating events brand, dedicated to creating authentic connections in our community.
-
-## 📞 Contact
-
-- **Website**: [gridamsterdam.com](https://gridamsterdam.com)
-- **Email**: contact@gridamsterdam.com
-- **Instagram**: [@gridamsterdam](https://instagram.com/gridamsterdam)
+Production output is generated in `dist/`.
 
 ---
 
-**© 2026 GRID Amsterdam. All rights reserved.**
+**Copyright (c) 2026 GRID Amsterdam**

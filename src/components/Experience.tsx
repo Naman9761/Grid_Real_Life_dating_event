@@ -28,53 +28,59 @@ export default function Experience() {
           </div>
 
           {/* Right Text Block */}
-          <div className="md:col-span-4 glass rounded-[2.5rem] p-12 flex flex-col justify-center items-center text-center border-white/5">
-            <h3 className="text-3xl font-bold font-display leading-tight">
-              No ghosting.
-              <br />
-              No algorithms.
-            </h3>
-          </div>
-
-          {/* Bottom Left Block */}
-          <div className="md:col-span-5 relative rounded-[2.5rem] overflow-hidden group">
+          <div className="md:col-span-4 relative rounded-[2.5rem] overflow-hidden group">
             <img
-              src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=800"
-              className="absolute inset-0 w-full h-full object-cover"
-              alt="Socialize"
+              src="https://plus.unsplash.com/premium_photo-1775664297543-72e98e02203e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z2hvc3RpbmclMjBpbiUyMGludGVybmV0fGVufDB8fDB8fHww"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              alt="No ghosting"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-brand-pink/20 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-brand-purple/20 mix-blend-overlay" />
             <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 flex items-center justify-center p-8 text-center">
               <h3 className="text-3xl font-bold font-display leading-tight">
                 No ghosting.
-                <br />
-                No algorithms.
               </h3>
             </div>
           </div>
 
-          {/* Bottom Right Block */}
-          <div className="md:col-span-7 relative rounded-[2.5rem] overflow-hidden group">
-            <img
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              alt="Connection"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-linear-to-r from-black/80 to-transparent" />
-            <div className="absolute inset-0 flex items-end p-12">
-              <motion.h3
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="text-4xl font-bold font-display"
-              >
-                Just real connection.
-              </motion.h3>
+          {/* Bottom Left Block */}
+            <div className="md:col-span-5 relative rounded-[2.5rem] overflow-hidden group">
+              <img
+                src="https://images.pexels.com/photos/29763529/pexels-photo-29763529.jpeg"
+                className="absolute inset-0 w-full h-full object-cover"
+                alt="Socialize"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-brand-pink/20 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 flex items-center justify-center p-8 text-center">
+                <h3 className="text-3xl font-bold font-display leading-tight">
+                  No algorithms.
+                </h3>
+              </div>
             </div>
-          </div>
+
+            {/* Bottom Right Block */}
+            <div className="md:col-span-7 relative rounded-[2.5rem] overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=800"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Connection"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-black/80 to-transparent" />
+              <div className="absolute inset-0 flex items-end p-12">
+                <motion.h3
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="text-4xl font-bold font-display"
+                >
+                  Just real connection.
+                </motion.h3>
+              </div>
+            </div>
         </div>
       </div>
     </section>
