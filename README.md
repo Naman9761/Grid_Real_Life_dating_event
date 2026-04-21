@@ -19,7 +19,7 @@ GRID reimagines dating events by bringing people together in real venues for gen
 
 These are the concept-to-build screens I designed myself in Stitch, then translated into this React + TypeScript implementation.
 
-### Design references
+### Design references Builded by own on Stitch
 
 ![Event details concept](docs/designs/design-event-details.png)
 ![Desktop conversion concept](docs/designs/design-desktop-concept.png)
